@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    
+    box-sizing: border-box;
+    border: 0;
+}
+
+body{
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #FF6200;
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1160px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+header{
+    padding: 20px 0;
+    border-bottom: 1px solid #FF6200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+}
+input{
+    border-bottom: #FF6200 1px solid;
+    width: 100px;
+}
+.lupa{
+    position: relative;
+    right: 80px;
+}
+
+main h1{
+    color: white;
+    font-size: xx-large;
+    font-weight: 600;
+    padding: 1rem;
+    position: relative;
+    top: -20px;
+}
+#linha{
+    border: solid 1px white;
+    width: 831px;
+    position: relative;
+    left: 130px;
+    top: -60px;
+}
+main{
+    position: relative;
+    top: 40px;
+}
+
+#content{
+    border: solid 2px #FF6200;
+    border-radius: 1rem;
+    box-shadow: #FF6200 0px 0px 20px;
+    height: 290px;
+    width: 650px;
+    padding: 2rem;
+}
+button{
+    background-color: #FF6200;
+    color: black;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: medium;
+    font-weight: 600;
+    position: relative;
+    top: 10px;
+    width: 120px;
+    text-align: left;
+}
+#content img{
+    position: relative;
+    left: 43%;
+    bottom: -45px;
+    width: 80px;
+
+}
+.hayato{
+    position: relative;
+    left: 800px;
+    bottom: 330px;
+    width: 250px;
+}
