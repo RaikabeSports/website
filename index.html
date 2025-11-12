@@ -1,32 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>raikab´s new website</title>
+  <title>Raikab E-Sports</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <body>
-  <img class="logo" src="./img/logo.png" alt="">
-  <header>
-    <a href=""><span>Início</span></a>
-    <a href=""><span>Sobre nós</span></a>
-    <a href=""><span>Time</span></a>
-    <a href=""><span>Produtos</span></a>
-    <a href=""><span>Jogos</span></a>
-    <a href=""><span>Destaque</span></a>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="./img/logo.png" alt="Logo Raikab">
+    </div>
+    <nav class="nav-links">
+      <a href="#">Início</a>
+      <a href="#">Sobre nós</a>
+      <a href="#">Time</a>
+      <a href="#">Produtos</a>
+      <a href="#">Jogos</a>
+      <a href="#">Destaque</a>
+    </nav>
+    <button class="btn-login">Entrar Agora</button>
+    <div class="menu-mobile" id="menu-toggle">&#9776;</div>
   </header>
-  <button id="btn">Entrar Agora</button>
-  <main> <h1>MUDANDO O FUTURO DOS <span class="h1dlc">E-SPORTS</span></h1>
-    <img class="hero" src="./img/hero.png" alt="">
-    <img class="pombo" src="./img/pombo.png" alt="">
-    <h1 class="blw">World Class E-Sports & Gaming Team</h1>
-  </main>
+
+  <!-- Banner -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>/ MUDANDO O FUTURO DOS <span>E-SPORTS</span> /</h1>
+      <img src="./img/pombo.png" alt="Logo Central">
+      <p>World Class E-Sports & Gaming Team</p>
+    </div>
+  </section>
+
+  <script>
+    // Script do menu mobile
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+  </script>
+
 </body>
 </html>

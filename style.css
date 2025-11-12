@@ -1,93 +1,221 @@
-body{
-    background-color: black;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    color: #FF6200;
-    overflow: hidden;
+/* ===== RESET GERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-.hero{
+
+body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 15px 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+/* LINKS DE NAVEGAÇÃO */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6600;
+}
+
+/* BOTÃO DE LOGIN */
+.btn-login {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: #e05600;
+}
+
+/* MENU HAMBÚRGUER */
+.menu-mobile {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  background: url(./img/hero.png) no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero-content span {
+  color: #ff6600;
+}
+
+.hero-content img {
+  width: 120px;
+  height: auto;
+  margin: 20px 0;
+  max-width: 100%;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ===================================================== */
+/* ===== MEDIA QUERIES ===== */
+/* ===================================================== */
+
+/* === TELAS GRANDES (até 1440px) === */
+@media (max-width: 1440px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* === DESKTOP MÉDIO (até 1024px) === */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* === TABLET (até 768px) === */
+@media (max-width: 768px) {
+  /* Menu vira hambúrguer */
+  .menu-mobile {
+    display: block;
+  }
+
+  .btn-login {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    position: relative;
-    bottom: 10px;
-}
-.logo{
-    position: absolute;
-    height: 45px;
-    top: 6px;
-    left: 60px;
-    z-index: 1;
-}
-header{
+    gap: 20px;
+    padding: 30px 0;
+    display: none;
+  }
+
+  .nav-links.active {
     display: flex;
-    width: 80%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
 }
-header a{
-    text-decoration: none;
-    color: black;
-    font-size: 13.5px;
-    font-weight: 400;
-    line-height: 70px;
-    padding: 0 20px;
-    position: relative;
-    left: 395px;
-    top: -6px;
+
+/* === CELULAR PEQUENO (até 480px) === */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .hero-content img {
+    width: 100px;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
 }
-header a:hover{
-    text-decoration: underline;
+
+/* === CELULAR MUITO PEQUENO (até 360px) === */
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+  .hero-content p {
+    font-size: 0.8rem;
+  }
 }
-#btn{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    right: 60px;
-    padding: 1rem;
-    top: 10px;
-    height: 35px;
-    border-radius: 0.5rem;
-    border: none;
-    z-index: 2;
-    font-weight: 400;
-    background-color: #FF6200;
-    font-family: "Poppins", sans-serif;
-}
-main h1{
-    font-family: "Fjalla One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    position: absolute;
-    z-index: 2;
-display: flex;
-    align-items: center;
-    top: 100px;
-    left: 20%;
-    font-size: 60px;
-    line-height: 90px;
-    width: 900px;
-    color: #FFF;
-}
-.h1dlc{
-    color: #FF6200;
-    margin-left: 10px;
-}
-.pombo{
-    position: absolute;
-    z-index: 2;
-    left: 550px;
-    top: 240px;
-    height: 200px;
-}
-.blw{
-    position: absolute;
-    z-index: 2;
-    left: 35%;
-    top: 450px;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 24px;
-    width: 500px;
-    color: #FFF;
-}
+
+/* ===================================================== */
+/* Cada media query ajusta tamanhos de fonte, espaçamento,
+   e layout para manter legibilidade e visual consistente */
+/* ===================================================== */
