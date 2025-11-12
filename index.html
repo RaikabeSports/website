@@ -1,50 +1,237 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Raikab E-Sports</title>
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="./img/logo.png" alt="Logo Raikab">
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="./img/logo.png" alt="Raikab logo" class="logo">
+      </div>
+
+      <nav class="nav" id="nav">
+        <a class="nav-link active" href="#home">Início</a>
+        <a class="nav-link" href="#sobre">Sobre nós</a>
+        <a class="nav-link" href="#equipe">Time</a>
+        <a class="nav-link" href="#produtos">Produtos</a>
+        <a class="nav-link" href="#partidas">Partidas</a>
+        <a class="nav-link" href="#destaques">Destaques</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost">Entrar agora</button>
+        <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
     </div>
-    <nav class="nav-links">
-      <a href="#">Início</a>
-      <a href="#">Sobre nós</a>
-      <a href="#">Time</a>
-      <a href="#">Produtos</a>
-      <a href="#">Jogos</a>
-      <a href="#">Destaque</a>
-    </nav>
-    <button class="btn-login">Entrar Agora</button>
-    <div class="menu-mobile" id="menu-toggle">&#9776;</div>
   </header>
 
-  <!-- Banner -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>/ MUDANDO O FUTURO DOS <span>E-SPORTS</span> /</h1>
-      <img src="./img/pombo.png" alt="Logo Central">
-      <p>World Class E-Sports & Gaming Team</p>
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <h1 class="hero-title">/ MUDANDO O FUTURO DOS <span>E-SPORTS</span> /</h1>
+        <img src="./img/pombo.png" alt="Símbolo Raikab" class="hero-logo">
+        <p class="hero-sub">World Class E-Sports &amp; Gaming Team</p>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section about">
+      <div class="container about-grid">
+        <div class="about-left">
+          <img src="./img/hayato.png" alt="Personagem" class="about-figure">
+        </div>
+
+        <div class="about-right">
+          <h2 class="section-title">SOBRE NÓS</h2>
+
+          <div class="info-cards">
+            <article class="info-card">
+              <div class="icn">?</div>
+              <h3>Quem somos?</h3>
+              <p>Somos RAIKAB — uma comunidade que transforma paixão em estratégia e resultados. Construímos legado e desenvolvemos jogadores.</p>
+            </article>
+
+            <article class="info-card">
+              <div class="icn">🎯</div>
+              <h3>Nossa missão</h3>
+              <p>Elevar o nível com disciplina e paixão, inspirando gerações e criando um time competitivo e ético.</p>
+            </article>
+
+            <article class="info-card">
+              <div class="icn">👥</div>
+              <h3>Público alvo</h3>
+              <p>Novos talentos e fãs que buscam profissionalização — do amador ao pro player.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section id="equipe" class="section team">
+      <div class="container">
+        <h2 class="section-title center">Nossa Equipe</h2>
+
+        <div class="team-grid">
+          <!-- Repita / personalize cada card com suas imagens e dados -->
+          <article class="team-card">
+            <img src="./img/caio.png" alt="Caio Gabriel" class="team-photo">
+            <div class="team-body">
+              <h4>Caio Gabriel</h4>
+              <p class="muted">Função: Programador • Tempo: 5 anos • Jogo: Free Fire</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="./img/joshua.png" alt="Arthur Joshua" class="team-photo">
+            <div class="team-body">
+              <h4>Arthur Joshua</h4>
+              <p class="muted">Função: Programador • Tempo: 5 anos • Jogo: Free Fire</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="./img/bryan.png" alt="Bryan Lopes" class="team-photo">
+            <div class="team-body">
+              <h4>Bryan Lopes</h4>
+              <p class="muted">Função: Designer • Tempo: 5 anos • Jogo: Free Fire</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="./img/pele.png" alt="Vitor" class="team-photo">
+            <div class="team-body">
+              <h4>Vitor</h4>
+              <p class="muted">Função: Player • Tempo: 5 anos • Jogo: Free Fire</p>
+            </div>
+          </article>
+
+          <article class="team-card long">
+            <img src="./img/ryan.png" alt="Ryan Carlos" class="team-photo small">
+            <div class="team-body">
+              <h4>Ryan Carlos</h4>
+              <p class="muted">Função: Mídia • Tempo: 5 meses • Jogo: Free Fire</p>
+            </div>
+          </article>
+
+          <article class="team-card long">
+            <img src="./img/ana.png" alt="Ana Clara" class="team-photo small">
+            <div class="team-body">
+              <h4>Ana Clara</h4>
+              <p class="muted">Função: Mídia • Tempo: 5 meses • Jogo: Free Fire</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="section products">
+      <div class="container">
+        <h2 class="section-title center">Produtos</h2>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-frame">
+              <img src="./img/Group 253.png" alt="Garrafa térmica" class="product-img">
+            </div>
+            <h4>Garrafa Térmica da Raikab</h4>
+            <p class="price">R$ 9,99</p>
+            <button class="btn btn-primary buy" data-product="Garrafa">Compre aqui</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-frame">
+              <img src="./img/Group 253.png" alt="Garrafa térmica" class="product-img">
+            </div>
+            <h4>Case Raikab</h4>
+            <p class="price">R$ 9,99</p>
+            <button class="btn btn-primary buy" data-product="Case">Compre aqui</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-frame">
+              <img src="./img/Group 253.png" alt="Garrafa térmica" class="product-img">
+            </div>
+            <h4>Camiseta Oficial</h4>
+            <p class="price">R$ 9,99</p>
+            <button class="btn btn-primary buy" data-product="Camiseta">Compre aqui</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÚLTIMAS PARTIDAS -->
+    <section id="partidas" class="section matches">
+      <div class="container">
+        <h2 class="section-title center">Últimas Partidas</h2>
+
+        <div class="matches-row">
+          <div class="match">
+            <img src="./img/pombo.png" alt="Raikab" class="match-logo">
+            <span class="score">4 x 0</span>
+            <img src="./img/grecia.png" alt="Grecia" class="match-logo">
+          </div>
+
+          <div class="match">
+            <img src="./img/krc.png" alt="KRC" class="match-logo">
+            <span class="score">1 x 2</span>
+            <img src="./img/pombo.png" alt="Raikab" class="match-logo">
+          </div>
+
+          <div class="match">
+            <img src="./img/t3rrifier.png" alt="Terrorifier" class="match-logo">
+            <span class="score">0 x 1</span>
+            <img src="./img/pombo.png" alt="Raikab" class="match-logo">
+          </div>
+
+          <div class="match">
+            <img src="./img/pombo.png" alt="Raikab" class="match-logo">
+            <span class="score">0 x 3</span>
+            <img src="./img/megalodonts.png" alt="Megalo" class="match-logo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section id="destaques" class="section highlights">
+      <div class="container">
+        <h2 class="section-title center">Destaques</h2>
+        <div class="highlights-grid">
+          <div class="highlight large"></div>
+          <div class="highlight small"></div>
+          <div class="highlight small"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2021 RAIKAB E-SPORTS. PRIVACY POLICY | TERMS OF SERVICE</p>
+      <div class="socials">
+        <img src="./img/images-removebg-preview.png" alt="instagram" class="social">
+        <img src="./img/x-new-twitter-logo-free-png.webp" alt="x" class="social">
+      </div>
     </div>
-  </section>
+  </footer>
 
-  <script>
-    // Script do menu mobile
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      menuToggle.classList.toggle('open');
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
